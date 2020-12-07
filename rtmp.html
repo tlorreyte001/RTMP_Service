@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <title>RTMP</title>
+</head>
+
+<body class="container">
+    <header class="m-3 mt-4">
+        <div class="text-center p-2 bg-light main-title">
+            <h1>RTMP</h1>
+        </div>
+    </header>
+
+    <section id="intro" class="main-container m-3 p-3 bg-light">
+        <div class="container">
+            <div class="row">
+                <h3>Introduction</h3>
+                <p class="text-justify"> <b>Naissance et évolution de RTMP<br /></b>
+                  Real Time Messaging Protocol est un protocole réseau anciennement propriétaire dévelopé par 
+                  Adobe dont la spécification a été rendu publique en 2009. Il est utilisé à ses débuts pour 
+                  délivrer du contenu dans des lecteurs flash. Ces derniers étant en perdition et devenu 
+                  obselète avec l’arrivée du HTML5, le protocol à été détourné de son utilisation principale 
+                  pour être utilisé par les terminaux pour diffuser leur capture ou contenu comme une camera 
+                  ip par exemple.
+                </p>
+
+                <p class="text-justify"> <b>Utilisation<br /></b>
+                  Aujourd’hui le protocol est plus largement utilisé pour faire remonter des données vers des 
+                  serveurs CDN afin qu’elles soient redistribuées par la suite par un autre protocol. Le
+                  site de streaming Twitch par exemple enregistre le flux d’un client OBS avec RTMP et 
+                  redistribue ce flux au viewer avec HLS.  
+                </p>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="intro" class="main-container m-3 p-3 bg-light">
+      <div class="container">
+          <div class="row">
+              <h3>Description et avantages du protocole</h3>
+              <p class="text-justify">
+                RTMP est un protocol basé sur TCP, ce qui permet d’avoir une connexion constante 
+                et une perte de données minimum. Pour délivrer des flux et transmettre autant d'informations  
+                que possible, RTMP divise les flux en fragments, et leur taille est négociée de manière 
+                dynamique entre le client et le serveur. Les tailles de fragment par défaut sont de 64 octets 
+                pour les données audio et de 128 octets pour les données vidéo et la plupart des autres 
+                types de données. Des fragments de différents flux peuvent ensuite être entrelacés et 
+                multiplexés sur une seule connexion. 
+              </p>
+
+              <p class="text-justify">
+                RTMP définit plusieurs canaux virtuels sur lesquels les paquets peuvent être envoyés 
+                et reçus, fonctionnant indépendamment les uns des autres. Par exemple, il existe un canal 
+                pour gérer les demandes et réponses RPC, un canal pour les données de flux vidéo, un 
+                canal pour les données de flux audio, un canal pour les messages de contrôle hors bande
+                (négociation de taille de fragment, etc.), etc. . Au cours d'une session RTMP typique, 
+                plusieurs canaux peuvent être actifs simultanément à tout moment.
+              </p>
+
+              <p class="text-justify">
+                Ces plusieurs canaux permettent une faible latence et garantissent une bonne qualité 
+                de service pour du live par exemple. Twitch, en utilisant RTMP, assure un délai de 2 à 5 sec 
+                entre la reception et la diffusion du flux aux clients. 
+              </p>
+          </div>
+      </div>
+    </section>
+
+    <section id="intro" class="main-container m-3 p-3 bg-light">
+      <div class="container">
+          <div class="row">
+              <h3>Description et avantages du protocole</h3>
+              <p class="text-justify">
+                RTMP est un protocol basé sur TCP, ce qui permet d’avoir une connexion constante 
+                et une perte de données minimum. Pour délivrer des flux et transmettre autant d'informations  
+                que possible, RTMP divise les flux en fragments, et leur taille est négociée de manière 
+                dynamique entre le client et le serveur. Les tailles de fragment par défaut sont de 64 octets 
+                pour les données audio et de 128 octets pour les données vidéo et la plupart des autres 
+                types de données. Des fragments de différents flux peuvent ensuite être entrelacés et 
+                multiplexés sur une seule connexion. 
+              </p>
+
+              <p class="text-justify">
+                RTMP définit plusieurs canaux virtuels sur lesquels les paquets peuvent être envoyés 
+                et reçus, fonctionnant indépendamment les uns des autres. Par exemple, il existe un canal 
+                pour gérer les demandes et réponses RPC, un canal pour les données de flux vidéo, un 
+                canal pour les données de flux audio, un canal pour les messages de contrôle hors bande
+                (négociation de taille de fragment, etc.), etc. . Au cours d'une session RTMP typique, 
+                plusieurs canaux peuvent être actifs simultanément à tout moment.
+              </p>
+
+              <p class="text-justify">
+                Ces plusieurs canaux permettent une faible latence et garantissent une bonne qualité 
+                de service pour du live par exemple. Twitch, en utilisant RTMP, assure un délai de 2 à 5 sec 
+                entre la reception et la diffusion du flux aux clients. 
+              </p>
+          </div>
+      </div>
+    </section>
+
+    <section id="intro" class="main-container m-3 p-3 bg-light">
+      <div class="container">
+          <div class="row">
+            <h3>Schéma général</h3>
+            <div class="container row">
+              <img src="src/Architecture.png" alt="genera" class="w-100 mt-2 mb-4">
+            </div>
+            <div class="container row text-center">
+              <img src="src/Diagramme.png" alt="genera" class="w-15 mt-2 mb-4 center-block">
+            </div>
+            <div class="container row">
+              <img src="src/Multiplexage.png" alt="genera" class="w-100 mt-2 mb-4">
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="intro" class="main-container m-3 p-3 bg-light">
+      <div class="container">
+          <div class="row">
+              <h3>How To</h3>
+              <p class="text-justify">
+                Le but de ce How To est de mettre en place une architecture de démonstration pour le 
+                protocole RTMP et d’observer les différents échanges. Pour une vision plus globale, nous 
+                utiliserons RTMP dans les deux sens de transfert de flux. Premièrement pour l’envoie d’un
+                client (OBS) vers le serveur (nginx) puis du serveur vers un client consommateur (VLC). 
+                Dans un premier temps, nous détaillerons les étapes pour mettre en place et démarrer 
+                le serveur et les deux clients RTMP, puis, dans un deuxième temps, nous essayerons de 
+                visualiser les échanges avec une capture réseau.
+              </p>
+
+              <h4>Mise en place du serveur avec Docker</h4>
+              <p class="text-justify">
+                Vous pouvez directement lancer le serveur avec l’image construite.
+                // Ligne docker
+                L’image contient la version 1.18 de nginx et la version 1.2.1 du module RTMP de nginx, 
+                configurables via les variables d’environnement NGINX_VERSION et
+                NGINX_RTMP_MODULE_VERSION. Les ports 1935 et 8080 sont exposés et le serveur devient 
+                accessible via l’adresse http://localhost:8080 ou rtmp://localhost. 
+                Le fichier de configuration nginx.conf contient les différents endpoints http et l’application 
+                rtmp « live » qui possède une sécurité par mot de passe contenu dans le fichier default.conf, 
+                par défaut « thomas ».
+              </p>
+          </div>
+      </div>
+    </section>
+
+    <section id="intro" class="main-container m-3 p-3 bg-light">
+      <div class="container">
+          <div class="row">
+            <h3>Démonstration</h3>
+          </div>
+          <div class="row">
+            <p class="text-justify">
+              Pour configurer OBS, il faut dans un premier temps accéder aux réglages : 
+            </p>
+          </div>
+            
+          <div class="row">
+            <div class="container row">
+              <img src="src/obs1.png" alt="genera" class="w-100 mt-2 mb-4">
+            </div>
+
+            <p class="text-justify">
+              Ensuite il faudra rentrer l’adresse IP du serveur avec la clé du stream construite avec 
+              un nom de stream arbitraire (ici tp) + « ?pwd=MOT_DE_PASSE » avec le mot de passe choisis 
+              dans la configuration de nginx :
+            </p>
+
+            <div class="container row">
+              <img src="src/obs2.png" alt="genera" class="w-100 mt-2 mb-4">
+            </div>
+            
+
+            <h5>Mise en place de VLC</h5>
+            <p class="text-justify">
+              Pour consommer le stream, dans vlc, Media -> Ouvrir un flux réseau. Il faudra rentrer l’url 
+              du serveur avec /NOM_APPLICATION/CLE_STREAM
+            </p>
+
+            <div class="container row">
+              <img src="src/vlc.png" alt="genera" class="w-100 mt-2 mb-4">
+            </div>
+
+            <h5>Visualisation des échanges</h5>
+            <p class="text-justify">
+              Pour visualiser le diagramme d’échange du protocole RTMP et vérifier sa bonne implémentation, 
+              nous avons réalisé une capture réseau entre OBS et le serveur. Dans notre démonstration le serveur 
+              était sur une machine virtuelle dans le cloud Azure à l’adresse 40.89.173.119 et le client OBS sur 
+              la machine de test à l’adresse 192.168.61.166. 
+            </p>
+            
+            <div class="container row">
+              <img src="src/wireshark1.png" alt="genera" class="w-100 mt-2 mb-4">
+            </div>
+
+            <p class="text-justify">
+              Sur cette capture réseau, on peut clairement voir la bonne utilisation du protocole RTMP avec les 
+              échanges du handshake, l’accord sur la taille des chunks la connexion à l’application « live ». 
+            </p>
+
+            <div class="container row">
+              <img src="src/wireshark2.png" alt="genera" class="w-100 mt-2 mb-4">
+            </div>
+          </div>
+
+          <div class="row">
+            <h5>Bonus</h5>
+          </div>
+          <div class="row">
+            <p class="text-justify">
+              Un exemple avec une diffusion sur la platforme Twitch : 
+            </p>
+            <div class="container row">
+              <img src="src/annexe1.png" alt="genera" class="w-100 mt-2 mb-4">
+            </div>
+            <p class="text-justify">
+              Nous avons le résultat suivant :
+            </p>
+            <div class="container row">
+              <img src="src/annexe2.png" alt="genera" class="w-100 mt-2 mb-4">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="intro" class="main-container m-3 p-3 bg-light">
+      <div class="container">
+          <div class="row">
+            <h3>How To</h3>
+          </div>
+          <p class="text-justify row">
+            https://www.scaleway.com/en/docs/setup-rtmp-streaming-server/
+          </p>
+          <p class="text-justify row">
+            https://github.com/arut/nginx-rtmp-module
+          </p>
+          <p class="text-justify row">
+            https://www.nginx.com
+          </p>
+      </div>
+    </section>
+
+</body>
+
+</html>
